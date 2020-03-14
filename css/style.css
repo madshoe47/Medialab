@@ -5,6 +5,10 @@ body {
     box-sizing: border-box;
 }
 
+
+
+/* Header */
+
 wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -70,8 +74,6 @@ label {
     color: #fff;
     text-decoration: none;
 }
-
-
 
 /* header med hjælp fra https://www.youtube.com/watch?v=sjrp1FEHnyA&t=245s */
 
@@ -182,6 +184,12 @@ label {
     transform: rotate(45deg);
     top: 0;
 }
+
+/* Header slut */
+
+
+
+
 
 
 
