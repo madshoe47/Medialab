@@ -15,31 +15,56 @@
     <meta name="description" content="Dette er et eksempel på en meta description, det vises i søgeresultater, udfyld den">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/33f806e50e.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-   <div class="wrapper">
-    <header>
-        <nav class="navi">
-            <div class="header">
-                <img id="logo" src="images/LogoMediaLab1.png" alt="Logo MediaLab">
-                <div id="book"> <a class="text1 "href=""><span class="text1">Book her</span></a></div>
-                <input class="menu-btn" type="checkbox" id="menu-btn" />
-                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-                <ul class="menu">
-                    <li><a href="index.html">Forside</a></li>
-                    <li><a href="ommads.html">Guides</a></li>
-                    <li><a href="motorsport.html">Booking</a></li>
-                    <li><a href="kontakt.html">Oprydning</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
+    <div class="wrapper">
+        <header>
+            <nav class="navi">
+                <div class="header">
+                    <img id="logo" src="images/LogoMediaLab1.png" alt="Logo MediaLab">
+                    <div class="book"> <a class="text1 " href=""><span class="text1">Book her</span></a></div>
+                    <input class="menu-btn" type="checkbox" id="menu-btn" />
+                    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                    <ul class="menu">
+                        <li><a href="index.html">Forside</a></li>
+                        <li><a href="ommads.html">Guides</a></li>
+                        <li><a href="motorsport.html">Booking</a></li>
+                        <li><a href="kontakt.html">Oprydning</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Velkommen til MediaLab</h1>
+            <img src="images/fotostudie.jpg" alt="MediaLab">
+            <h2>Retningslinjer for brug af rummet</h2>
+            <p></p>
+
+            <h2>Søgning</h2>
+            <input type="text" placeholder="Søg på hjemmesiden...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+
+            <h2>Udstyr</h2>
+            <div class="tab">
+                <button class="tablinks" href="#">Kamera (Video og Lyd)</button>
+                <button class="tablinks" href="#">Lyd</button>
+                <button class="tablinks" href="#">Lys</button>
+                <button class="tablinks" href="#">Stativer og Gimbals</button>
+                <button class="tablinks" href="#">Låneregler</button>
             </div>
-        </nav>
-    </header>
 
-    <main></main>
+            <h2>Booking</h2>
+            <button class="book-knapper" type="submit">Book MediaLab</button>
+            <button class="book-knapper" type="submit">Book udstyr</button>
+        </main>
 
-    <footer></footer>
+        <footer>
+
+        </footer>
     </div>
 
     <script src="java/javascript.js"></script>
