@@ -264,6 +264,23 @@ h2 {
     margin-top: 10px;
 }
 
+/*------------------KAMERA-SIDE--------------------*/
+
+.kamera-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kamera img {
+    border: 10px solid #ccc;
+    width: 300px;
+
+}
+
+.kamera h3 {
+    text-align: center;
+}
+
 
 footer {
     display: flex;
