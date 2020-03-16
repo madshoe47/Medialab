@@ -189,9 +189,15 @@ label {
 
 /* Header slut */
 
+h1 {
+    margin: 0 20px;
+}
+
 h2 {
     margin: 0 20px;
 }
+
+/*-------------- FORSIDE ---------------*/
 
 /* RETNINGSLINJER */
 .retningslinjer {
@@ -269,11 +275,16 @@ h2 {
 .kamera-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.kamera {
+    border-bottom: 1px solid #ccc;
 }
 
 .kamera img {
-    border: 10px solid #ccc;
-    width: 300px;
+
+    width: 400px;
 
 }
 
@@ -281,6 +292,22 @@ h2 {
     text-align: center;
 }
 
+.kamera button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: #80b5c0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+
+
+}
+
+/*--------------- FOOTER ----------------*/
 
 footer {
     display: flex;
