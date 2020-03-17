@@ -6,57 +6,62 @@ body {
     font-family: gill sans;
 }
 
-
-
-/* Header */
-
-wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(15, 1fr);
-    height: 100%;
+img {
     width: 100%;
 }
 
+main {
+    margin: 0 20px;
+}
+
 header {
-    z-index: 1;
-    grid-area: 1/1/3/-1;
+    background: white;
+    width: 100%;
+    padding: 10px;
 }
 
-.navi {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: center;
-
+/*NAVIGATION - responsiv med flexbox*/
+#logo-burger {
+    display: flex;
+    align-items: center;
+    margin: 0 .5em;
 }
 
-.header {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-around;
-    border-bottom: 3px solid #80b5c0;
+#logo-burger a {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
 }
 
-#logo {
-    grid-area: 1/2/2/4;
-    width: 70%;
-    margin-top: 10px;
-
+#main-nav {
+    display: flex;
+    margin-right: .5em;
 }
 
-label {
-    align-content: center;
-    text-align: center;
-
+#main-nav a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
-.menu {
-    grid-area: 2/1/4/-15;
-
+#main-nav a:hover {
+    color: grey;
 }
 
-.book {
+/*active class sættes på det link i menuen man befinder sig på, så farven ændres på menuen på den aktuelle side - den er ikke sat på noget endnu*/
+.active {
+    color: lightgrey;
+}
+
+/*Denne skjuler burgermenuens checkbox som aktiverer toggle funktionen*/
+.hidden {
+    display: none;
+}
+
+
+/*.book {
     background-color: #80b5c0;
     border-radius: 5px;
     display: flex;
@@ -65,7 +70,6 @@ label {
     align-items: center;
     align-content: center;
     height: 60%;
-    grid-area: 1/4/2/5;
     margin-top: 15%;
     margin-right: 35%;
     width: 85%;
@@ -74,127 +78,28 @@ label {
 .text1 {
     color: #fff;
     text-decoration: none;
-}
+}*/
 
-/* header med hjælp fra https://www.youtube.com/watch?v=sjrp1FEHnyA&t=245s */
-
-.header {
-    background-color: #fff;
-    box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, .5);
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    z-index: 3;
-}
-
-.header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background-color: #fff;
-}
-
-.header li a {
-    display: block;
-    padding: 10px 20px;
-    margin-top: 5px;
-    text-decoration: none;
-    color: #333;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-    background-color: #80b5c0;
-}
-
-.header .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
-    padding: 1px 20px;
-    margin-top: 4px;
-    text-decoration: none;
-}
-
-/* menu */
-
-.header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-}
-
-/* menu icon */
-
-.header .menu-icon {
-    cursor: pointer;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-
-.header .menu-icon .nav-icon {
-    background: #333;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-}
-
-.header .menu-icon .nav-icon:before,
-.header .menu-icon .nav-icon:after {
-    background: #333;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.header .menu-icon .nav-icon:before {
-    top: 5px;
-}
-
-.header .menu-icon .nav-icon:after {
-    top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-    display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-    max-height: 240px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon {
-    background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-    transform: rotate(-45deg);
-    top: 0;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-    transform: rotate(45deg);
-    top: 0;
-}
-
-/* Header slut */
 
 h1 {
     margin: 0 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 40px;
 }
 
 h2 {
     margin: 0 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 35px;
+}
+
+h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
 }
 
 /*-------------- FORSIDE ---------------*/
@@ -204,10 +109,15 @@ h2 {
     margin: 0 20px;
 }
 
+ol {
+    font-size: 20px;
+    line-height: 30px;
+}
+
 /* SEARCH BAR */
 .search-bar input[type=text] {
     padding: 19px;
-    padding-right: 40%;
+    padding-right: 32%;
     margin: 10px 0 10px 0;
     margin-left: 20px;
     font-size: 17px;
@@ -227,7 +137,7 @@ h2 {
 .tab {
     float: left;
     width: 90%;
-    height: 320px;
+    height: 260px;
     margin: 10px 0 10px 0;
 }
 
@@ -243,6 +153,8 @@ h2 {
     cursor: pointer;
     font-size: 17px;
     margin: 0 20px;
+    font-family: gill sans;
+    font-size: 20px;
 }
 
 /* Change background color of buttons on hover */
@@ -270,29 +182,31 @@ h2 {
     margin-top: 10px;
 }
 
-/*------------------KAMERA-SIDE--------------------*/
+/*-----------------ALLE BILLEDE SIDERNE--------------------*/
 
-.kamera-container {
+.produkter-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-end;
 }
 
-.kamera {
-    border-bottom: 1px solid #ccc;
-}
-
-.kamera img {
-
-    max-width: 100%;
+.produkter {
+    border: 20px solid transparent;
+    display: flex;
+    flex-direction: column;
 
 }
 
-.kamera h3 {
+.produkter img {
+    width: 400px;
+}
+
+.produkter h3 {
     text-align: center;
 }
 
-.kamera button {
+.produkter button {
     display: block;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -303,15 +217,53 @@ h2 {
     color: white;
     text-align: center;
     cursor: pointer;
+}
 
+/*---------360 FLY ACTION SIDE ----------*/
 
+.fly-action {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 20px;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    width: 460px;
+    height: 300px;
+
+}
+
+ul {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/*--------- CANON EOS 7000D ----------*/
+
+.canon-eos {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*--------- SONY ALPHA A6000 ----------*/
+
+.sony-alpha {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
 }
 
 /*--------------- FOOTER ----------------*/
 
 footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     padding: 0 20px;
     background-color: #7c7c7c;
@@ -326,23 +278,115 @@ footer a {
 
 
 
-/*Styling til devices */
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    /*Husk at disse er et stylesheet inde i stylesheetet, så du skal vælge grupper osv igen */
+/* telfon */
+@media all and (max-width: 599px) {
+
+    /*HEADER NAV*/
+    header {
+        display: block;
+    }
+
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*label er selve burgerikonet*/
+    #logo-burger label {
+        display: block;
+        font-size: 2em;
+        margin-right: 15px;
+        cursor: pointer;
+        /*laver en hånd i stedet for en pil, når man kører hen over burgermenuen*/
+    }
+
+    /*Dette gør at burgermenuen folder sig ud, når man klikker på den - eller rettere sagt den checkboks som er skjult bag den*/
+    #toggle:checked + #main-nav {
+        display: block;
+    }
+
+    /*Den primære navigation skjules på den lille skærm*/
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav a {
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /*Dette påvirker dropdown i mobilversionen, da hover ikke virker med fingeren, så nu er det hele foldet ud, border er fjernet og skriften er mindre.*/
+    #main-nav .dropdown-content a {
+        font-size: 0.9em;
+        border: none;
+    }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+
+/* tablet */
+@media all and (min-width: 600px) {
+
+    /*HEADER NAV*/
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    #main-nav {
+        justify-content: space-evenly;
+        min-width: 50%;
+        margin: 0;
+    }
+
+    #main-nav a {
+        margin: 0 .5em;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /*Dette fjerner burgermenu ikonet*/
+    label {
+        display: none;
+    }
+
+    /*Dropdown*/
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover {
+        background-color: blue;
+    }
 
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}

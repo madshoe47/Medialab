@@ -16,106 +16,137 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/33f806e50e.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <nav class="navi">
-                <div class="header">
-                    <img id="logo" src="images/LogoMediaLab1.png" alt="Logo MediaLab">
-                    <div class="book"> <a class="text1 " href=""><span class="text1">Book her</span></a></div>
-                    <input class="menu-btn" type="checkbox" id="menu-btn" />
-                    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-                    <ul class="menu">
-                        <li><a href="index.html">Forside</a></li>
-                        <li><a href="ommads.html">Guides</a></li>
-                        <li><a href="motorsport.html">Booking</a></li>
-                        <li><a href="kontakt.html">Oprydning</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
+    <header>
+        <nav>
+
+            <div id="logo-burger">
+                <a href="index.html"><img id="logo" src="images/LogoMediaLab1.png" alt="Logo"></a>
+                <label for="toggle">&#9776;</label>
+            </div>
+            <!--dette er en checkbox som gør det muligt at folde burgermenuen ud, og den skal ligge udenfor de to divs-->
+            <input type="checkbox" id="toggle" class="hidden">
+
+            <div id="main-nav">
+                <a href="#">Book MediaLab</a>
+                <a href="#">Book Udstyr</a>
+                <div class="dropdown">
+                    <a href="#">Kamera (Foto og Video)</a>
+                    <div class="dropdown-content">
+                        <a href="#">Web</a>
+                        <a href="#">Design</a>
+                        <a href="#">Foto</a>
+                    </div>
                 </div>
-            </nav>
-        </header>
-
-        <main>
-            <h1>Velkommen til MediaLab</h1>
-            <!-- Dette skulle være et billede af MediaLab-->
-            <img src="images/fotostudie.jpg" alt="MediaLab">
-            <h2>Retningslinjer for brug af rummet</h2>
-            <section class="retningslinjer">
-                <p>Medialab er et fælles rum for alle studerende, og derfor er der nogle vigtige forholdsregler at tage stilling til, når man bruger Medialab, så vi sikrer at alle for en god oplevelse. Vi forventer dermed at de studerende:</p>
-                <ol>
-                    <li>Passer på rummet og udstyret, som var det deres eget.</li>
-                    <li>Husker at rydde op efter sig:</li>
-                    <ul>
-                        <li>Smider brugt papir eller andet affald ud.</li>
-                        <li>Huske at tage personlige ejendele med sig, når man forlader rummet.</li>
-                        <li>Hvis der er omrokeret på udstyrets placeringer, at de bliver anbragt tilbage på deres oprindelige pladser efter brug.</li>
-                        <li>Alle små-dele placeres på det udstyr de tilhører.</li> <br>
-                    </ul>
-                    <li>Tilbagemelder til enten biblioteket eller receptionen, hvis noget af udstyret ikke fungerer som det skal. </li>
-                    <li>Det lånte udstyr bliver afleveret tilbage til biblioteket.</li>
-                    <li>Og selvfølgelig husker at have det sjovt!</li>
-                </ol>
-            </section>
-
-            <section class="search-bar">
-                <h2>Søgning</h2>
-                <input type="text" placeholder="Søg på hjemmesiden...">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </section>
-
-            <h2>Udstyr</h2>
-            <div class="tab">
-                <form action="kamera.html">
-                    <button class="tablinks" type="submit">Kamera (Video og Lyd)</button>
-                </form>
-                <form action="lyd.html">
-                    <button class="tablinks" type="submit">Lyd</button>
-                </form>
-                <form action="lys.html">
-                    <button class="tablinks" type="submit">Lys</button>
-                </form>
-                <form action="stativer.html">
-                    <button class="tablinks" type="submit">Stativer og Gimbals</button>
-                </form>
-                <form action="laaneregler.html">
-                    <button class="tablinks" type="submit">Låneregler</button>
-                </form>
+                <div class="dropdown">
+                    <a href="#">Lyd</a>
+                    <div class="dropdown-content">
+                        <a href="#">Web</a>
+                        <a href="#">Design</a>
+                        <a href="#">Foto</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Lys</a>
+                    <div class="dropdown-content">
+                        <a href="#">Web</a>
+                        <a href="#">Design</a>
+                        <a href="#">Foto</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">Stativer og Gimbals</a>
+                    <div class="dropdown-content">
+                        <a href="#">Web</a>
+                        <a href="#">Design</a>
+                        <a href="#">Foto</a>
+                    </div>
+                </div>
             </div>
+        </nav>
+        <hr>
+    </header>
 
-            <h2>Booking</h2>
-            <button class="book-knapper" type="submit">Book MediaLab</button>
-            <button class="book-knapper" type="submit">Book udstyr</button>
-        </main>
 
-        <footer>
-            <div>
-                <h3>Kontakt os</h3>
-                <p>Erhvervsakademi Aarhus <br>
-                    Sønderhøj 30, 8260 Viby J <br>
-                    Telefon: 7228 6040 <br>
-                    Mail: eaa-bibliotek@eaaa.dk
-                </p>
-            </div>
 
-            <div>
-                <br>
-                <br>
-                <p>CVR: <br>
-                    31677971 <br>
-                    EAN: <br>
-                    5798000560307</p>
-            </div>
-            <div>
-                <br>
-                <br>
-                <br>
-                <a href="https://www.eaaa.dk/cookies-og-persondata-pa-eaaa-dk/">Cookies og persondata på eaaa.dk</a>
-            </div>
-        </footer>
+    <main>
+        <h1>Velkommen til MediaLab</h1>
+        <!-- Dette skulle være et billede af MediaLab-->
+        <img src="images/foto-studie.jpg" alt="MediaLab">
+        <h2>Retningslinjer for brug af rummet</h2>
+        <section class="retningslinjer">
+            <p>Medialab er et fælles rum for alle studerende, og derfor er der nogle vigtige forholdsregler at tage stilling til, når man bruger Medialab, så vi sikrer at alle for en god oplevelse. Vi forventer dermed at de studerende:</p>
+            <ol>
+                <li>Passer på rummet og udstyret, som var det deres eget.</li>
+                <li>Husker at rydde op efter sig:</li>
+                <ul>
+                    <li>Smider brugt papir eller andet affald ud.</li>
+                    <li>Huske at tage personlige ejendele med sig, når man forlader rummet.</li>
+                    <li>Hvis der er omrokeret på udstyrets placeringer, at de bliver anbragt tilbage på deres oprindelige pladser efter brug.</li>
+                    <li>Alle små-dele placeres på det udstyr de tilhører.</li> <br>
+                </ul>
+                <li>Tilbagemelder til enten biblioteket eller receptionen, hvis noget af udstyret ikke fungerer som det skal. </li>
+                <li>Det lånte udstyr bliver afleveret tilbage til biblioteket.</li>
+                <li>Og selvfølgelig husker at have det sjovt!</li>
+            </ol>
+        </section>
+
+        <section class="search-bar">
+            <h2>Søgning</h2>
+            <input type="text" placeholder="Søg på hjemmesiden...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </section>
+
+        <h2>Udstyr</h2>
+        <div class="tab">
+            <form action="kamera.html">
+                <button class="tablinks" type="submit">Kamera (Video og Lyd)</button>
+            </form>
+            <form action="lyd.html">
+                <button class="tablinks" type="submit">Lyd</button>
+            </form>
+            <form action="lys.html">
+                <button class="tablinks" type="submit">Lys</button>
+            </form>
+            <form action="stativer.html">
+                <button class="tablinks" type="submit">Stativer og Gimbals</button>
+            </form>
+
+        </div>
+
+        <h2>Booking</h2>
+        <button class="book-knapper" type="submit">Book MediaLab</button>
+        <button class="book-knapper" type="submit">Book udstyr</button>
+    </main>
+
+    <footer>
+        <div>
+            <h3>Kontakt os</h3>
+            <p>Erhvervsakademi Aarhus <br>
+                Sønderhøj 30, 8260 Viby J <br>
+                Telefon: 7228 6040 <br>
+                Mail: eaa-bibliotek@eaaa.dk
+            </p>
+        </div>
+
+        <div>
+            <p>CVR:
+                31677971 <br>
+                EAN:
+                5798000560307</p>
+        </div>
+        <div>
+            <a href="https://www.eaaa.dk/cookies-og-persondata-pa-eaaa-dk/">Cookies og persondata på eaaa.dk</a>
+        </div>
+        <br>
+        <div id="tid"></div>
+    </footer>
     </div>
 
     <script src="java/javascript.js"></script>
-</body></html>
+</body>
+
+</html>
