@@ -154,6 +154,11 @@ p {
 /*-------------- FORSIDE ---------------*/
 
 /* RETNINGSLINJER */
+
+#forsidebillede {
+    border-radius: 10px;
+}
+
 .retningslinjer {
     margin: 0 20px;
 }
@@ -161,6 +166,14 @@ p {
 ol {
     font-size: 20px;
     line-height: 30px;
+    border: solid 2px #333;
+    border-radius: 10px;
+    padding-right: 5px;
+
+}
+
+.small {
+    font-size: 18px;
 }
 
 /* SEARCH BAR */
@@ -175,7 +188,7 @@ ol {
 
 .search-bar button {
     padding: 20px 20px;
-    background: #ddd;
+    background: #80b5c0;
     font-size: 17px;
     border: none;
     cursor: pointer;
@@ -187,15 +200,20 @@ ol {
     float: left;
     width: 90%;
     height: 260px;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 10px 6px;
     margin-bottom: 60px;
+}
+
+.tab form {
+    background-color: #7c7c7c;
+    border-radius: 10px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
     display: block;
-    background-color: #f1f1f1;
-    color: black;
+    background-color: #7c7c7c;
+    color: #fff;
     padding: 20px 16px;
     width: 100%;
     border-bottom: 3px solid inherit;
@@ -245,21 +263,29 @@ ol {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
+    width: 100%;
 }
 
 .produkter {
     border: 20px solid transparent;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 80%;
 
 }
 
 .produkter img {
-    width: 400px;
+    width: 300px;
 }
 
 .produkter h3 {
     text-align: center;
+}
+
+.produkter-container form {
+    background-color: #80b5c0;
+    border-radius: 5px;
 }
 
 .produkter button {
@@ -269,6 +295,7 @@ ol {
     background-color: #80b5c0;
     border-radius: 5px;
     font-size: 20px;
+    margin-top: 5px;
     color: white;
     text-align: center;
     cursor: pointer;
@@ -313,6 +340,18 @@ ul {
     width: 100%;
     margin-top: 20px;
 }
+
+.container-specifikation {
+    background-color: #80b5c0;
+    border-radius: 10px;
+    color: #fff;
+    padding-right: 5px;
+}
+
+.frame {
+    width: 100%;
+}
+
 
 /*--------- KONTAKT SIDE ----------*/
 
@@ -518,7 +557,7 @@ span.adgangskode {
 }
 
 .plan-oversigt {
-    margin-top: 130px;
+    margin-top: 100px;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -575,6 +614,8 @@ footer a {
     header .logo {
         display: block;
         margin: 0 auto;
+        max-height: 75px;
+        max-width: 350px;
     }
 
     .book {
