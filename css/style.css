@@ -127,14 +127,20 @@ h1 {
     margin: 0 20px;
     font-family: 'Work Sans', sans-serif;
     font-size: 40px;
-    margin-top: 20%;
+    margin-top: 25%;
 }
 
 h2 {
     margin: 0 20px;
     font-family: 'Work Sans', sans-serif;
     font-size: 35px;
+    margin-top: 10%;
 }
+
+.booking-overskrift {
+    margin-top: 20%;
+}
+
 
 h3 {
     font-family: 'Work Sans', sans-serif;
@@ -159,10 +165,10 @@ ol {
 
 /* SEARCH BAR */
 .search-bar .sog {
+    width: 100%;
     padding: 19px;
     padding-right: 32%;
     margin: 10px 0 10px 0;
-    margin-left: 20px;
     font-size: 17px;
     border: 10px 10px #ddd;
 }
@@ -182,6 +188,7 @@ ol {
     width: 90%;
     height: 260px;
     margin: 10px 0 10px 0;
+    margin-bottom: 60px;
 }
 
 /* Style the buttons inside the tab */
@@ -225,6 +232,12 @@ ol {
     margin-top: 10px;
 }
 
+.book-oversigt {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
 /*-----------------ALLE BILLEDE SIDERNE--------------------*/
 
 .produkter-container {
@@ -255,7 +268,6 @@ ol {
     margin-bottom: 10px;
     background-color: #80b5c0;
     border-radius: 5px;
-    padding: 10px;
     font-size: 20px;
     color: white;
     text-align: center;
@@ -403,6 +415,125 @@ label {
     padding: 20px;
 }
 
+form {
+    border: 3px solid #f1f1f1;
+}
+
+.login {
+    border: 3px solid #f1f1f1;
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+
+/*--------- LOGIN SIDE TIL BOOKING ----------*/
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=date],
+input[type=time] {
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    font-size: 20px;
+
+}
+
+button {
+    background-color: #80b5c0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.gaa-videre-knapper {
+    background-color: #80b5c0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #7c7c7c;
+}
+
+.container {
+    padding: 16px;
+    background-color: #f1f1f1;
+}
+
+.booking-side {}
+
+span.adgangskode {
+    float: right;
+    padding-top: 16px;
+}
+
+/*--------- BOKKING SIDE FOR MEDIALAB ----------*/
+.plan {
+    background-color: #80b5c0;
+    margin-bottom: 30px;
+}
+
+.foerste {
+    background-color: #f1f1f1;
+}
+
+.anden {
+    background-color: #f1f1f1;
+}
+
+.tredje {
+    background-color: #f1f1f1;
+    font-size: 20px;
+}
+
+.plan-oversigt {
+    margin-top: 130px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.adgnagskode {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+}
+
 /*--------------- FOOTER ----------------*/
 
 footer {
@@ -418,6 +549,7 @@ footer {
 footer a {
     color: #80b5c0;
 }
+
 
 
 
