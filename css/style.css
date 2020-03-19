@@ -14,77 +14,120 @@ main {
     margin: 0 20px;
 }
 
+/*-------------- NAVIGATION ---------------*/
+
 header {
-    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background-color: #fff;
     width: 100%;
-    padding: 10px;
-}
-
-/*NAVIGATION - responsiv med flexbox*/
-#logo-burger {
+    border-bottom: 3px solid #80b5c0;
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
-    margin: 0 .5em;
+    justify-content: space-between;
 }
 
-#logo-burger a {
+header .logo {
+    width: 70%;
+    margin-left: 40%;
+}
+
+
+header nav ul {
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    margin-left: -5%;
+}
+
+
+
+.book {
+    line-height: 40px;
+    height: 40px;
+    padding: 0px 10px 0px 10px;
+    margin-top: 1%;
+    background-color: #80b5c0;
+    border-radius: 5px;
+}
+
+.book a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav ul li {
+    list-style: none;
+    position: relative;
+}
+
+header nav ul li.sub-menu:before {
+    content: '\f0d7';
+    font-family: fontAwesome;
+    position: absolute;
+    line-height: 50px;
+    color: #333;
+    right: 5px;
+}
+
+header nav ul li.active.sub-menu:before {
+    content: '\f0d8'
+}
+
+
+header nav ul li ul {
+    position: absolute;
+    left: 0;
+    background: #ececec;
+    display: none;
+
+}
+
+header nav ul li.active ul {
     display: block;
-    margin: 0 auto;
-    width: 300px;
 }
 
-#main-nav {
-    display: flex;
-    margin-right: .5em;
+header nav ul li ul li {
+    display: block;
+    width: 200px;
+
 }
 
-#main-nav a {
-    color: black;
+header nav ul li a {
+    height: 60px;
+    line-height: 40px;
+    padding: 0 30px;
+    color: #333;
     text-decoration: none;
     display: block;
-    font-size: 1.5em;
-    line-height: 1.5em;
+
 }
 
-#main-nav a:hover {
-    color: grey;
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #fff;
+    background-color: #80b5c0;
 }
 
-/*active class sættes på det link i menuen man befinder sig på, så farven ændres på menuen på den aktuelle side - den er ikke sat på noget endnu*/
-.active {
-    color: lightgrey;
-}
-
-/*Denne skjuler burgermenuens checkbox som aktiverer toggle funktionen*/
-.hidden {
+.menu-toggle {
+    color: #333;
+    float: right;
+    line-height: 50px;
+    font-size: 40px;
+    cursor: pointer;
     display: none;
 }
 
 
-/*.book {
-    background-color: #80b5c0;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    height: 60%;
-    margin-top: 15%;
-    margin-right: 35%;
-    width: 85%;
-}
-
-.text1 {
-    color: #fff;
-    text-decoration: none;
-}*/
-
+/*----------- OVERSKRIFTER OG TEKST ------------*/
 
 h1 {
     margin: 0 20px;
     font-family: 'Work Sans', sans-serif;
     font-size: 40px;
+    margin-top: 20%;
 }
 
 h2 {
@@ -381,113 +424,86 @@ footer a {
 
 
 /* telfon */
-@media all and (max-width: 599px) {
-
-    /*HEADER NAV*/
-    header {
-        display: block;
-    }
-
-    #logo-burger {
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /*label er selve burgerikonet*/
-    #logo-burger label {
-        display: block;
-        font-size: 2em;
-        margin-right: 15px;
-        cursor: pointer;
-        /*laver en hånd i stedet for en pil, når man kører hen over burgermenuen*/
-    }
-
-    /*Dette gør at burgermenuen folder sig ud, når man klikker på den - eller rettere sagt den checkboks som er skjult bag den*/
-    #toggle:checked + #main-nav {
-        display: block;
-    }
-
-    /*Den primære navigation skjules på den lille skærm*/
-    #main-nav {
-        display: none;
-    }
-
-    #main-nav a {
-        text-align: center;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    /*Dette påvirker dropdown i mobilversionen, da hover ikke virker med fingeren, så nu er det hele foldet ud, border er fjernet og skriften er mindre.*/
-    #main-nav .dropdown-content a {
-        font-size: 0.9em;
-        border: none;
-    }
-}
+@media all and (max-width: 599px) {}
 
 
 
 /* tablet */
-@media all and (min-width: 600px) {
+@media all and (min-width: 600px) {}
 
-    /*HEADER NAV*/
-    nav {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    header {
+        padding: 0 20px;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header .logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .book {
+        line-height: 40px;
+        height: 40px;
+        padding: 0px 5px 0px 5px;
+        margin-top: 4%;
+        margin-right: -3%;
+        background-color: #80b5c0;
+        border-radius: 5px;
     }
 
 
-    #main-nav {
-        justify-content: space-evenly;
-        min-width: 50%;
+
+    header nav ul {
         margin: 0;
+        padding: 0;
+        display: flex;
+        margin-left: 0%;
     }
 
-    #main-nav a {
-        margin: 0 .5em;
+
+    .menu-toggle {
+        display: block;
+        margin-top: 3%;
     }
 
-    .hidden {
-        display: none;
-    }
-
-    /*Dette fjerner burgermenu ikonet*/
-    label {
-        display: none;
-    }
-
-    /*Dropdown*/
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
+    header nav {
         position: absolute;
-        background-color: #fff;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #fff;
+        top: 60px;
+        left: -100%;
+        transition: 0.5s;
     }
 
-    .dropdown-content a {
-        padding: 12px 16px;
-        text-decoration: none;
+    header nav.active {
+        left: 0;
+    }
+
+    header nav ul {
         display: block;
+        text-align: center;
     }
 
-    .dropdown-content a:hover {
-        background-color: #fff;
+    header nav ul li.active ul {
+        position: relative;
+        background: #ececec;
     }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
+    header nav ul li ul li {
+        width: 100%;
     }
 
-    .dropdown:hover {
-        background-color: blue;
+    header nav ul li ul li a {
+        font-size: 12px;
+    }
+
+    .menu {
+        border-bottom: 3px solid #80b5c0;
     }
 
 }
