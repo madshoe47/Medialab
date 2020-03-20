@@ -355,6 +355,10 @@ ul {
 
 /*--------- KONTAKT SIDE ----------*/
 
+.kontakt-overskrift h3 {
+    margin-top: 20%;
+}
+
 .checkbox {
     display: block;
     position: relative;
