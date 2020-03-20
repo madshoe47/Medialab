@@ -434,7 +434,7 @@ textarea {
     resize: vertical;
 }
 
-input[type=submit] {
+button[type=submit] {
     background-color: #80b5c0;
     color: white;
     padding: 12px 20px;
@@ -444,7 +444,7 @@ input[type=submit] {
     font-size: 20px;
 }
 
-input[type=submit]:hover {
+button[type=submit]:hover {
     background-color: #7c7c7c;
 }
 
