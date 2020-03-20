@@ -22,19 +22,28 @@ function udstyr() {
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace("active", "");
     }
+};
+
+// Tidszone for Danmark
+fetch("http://worldtimeapi.org/api/timezone/Europe/Copenhagen")
+
+    .then(function (data) {
+        return data.json();
+    })
 
 
-    // Tidszone for Danmark
-    fetch("http://worldtimeapi.org/api/timezone/Europe/Copenhagen")
+    .then(function (post) {
+        const tid = document.getElementById("tid");
 
-        .then(function (data) {
-            return data.json();
-        })
+        tid.innerHTML = (post.datetime);
 
-        .then(function (post) {
-            document.getElementById("tid").innerHTML = post.utc_datetime + post.weather[0].description;
+        const datoOGtid = new Date(post.datetime);
+        tid.insertAdjacentHTML("beforeend", "<br>Dato: " + datoOGtid.getDate());
+        tid.insertAdjacentHTML("beforeend", "<br>Måned: " + datoOGtid.getMonth());
+        tid.insertAdjacentHTML("beforeend", "<br>Årstal: " + datoOGtid.getFullYear());
+        tid.insertAdjacentHTML("beforeend", "<br>Tid: " + datoOGtid.getHours() + ":" + datoOGtid.getMinutes());
 
-        })
-}
+
+    });
